@@ -1,0 +1,7 @@
+@use '_typography';
+@use 'reset';
+
+//selection color
+*::selection {
+  background-color: red;
+}
