@@ -1,7 +1,13 @@
 @use '_typography';
+@use '_mixins';
 @use 'reset';
 
 //selection color
 *::selection {
   background-color: red;
+
+  //test media
+  @include mixins.media('m') {
+    background-color: green;
+  }
 }

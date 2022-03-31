@@ -1,0 +1,20 @@
+@mixin media($breakpoint: 'xs') {
+  $breakpoints: (
+    'xs': '(max-width: 500px)',
+    'sm': '(max-width: 639px)',
+    'm': '(max-width: 778px)',
+    'lg': '(max-width: 900px)',
+    'xl': '(max-width: 970px)',
+    'xxl': '(max-width: 1250px)',
+    'xxxl': '(max-width: 1800px)',
+  );
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+} ;
