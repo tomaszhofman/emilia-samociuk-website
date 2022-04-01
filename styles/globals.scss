@@ -1,6 +1,7 @@
 @use '_typography';
 @use '_mixins';
 @use 'reset';
+@use 'variables';
 
 body {
   background-color: var(--color-primary);
@@ -14,4 +15,10 @@ body {
   @include mixins.media('m') {
     background-color: green;
   }
+}
+
+//loading state
+body.loading {
+  overflow: hidden;
+  height: 100vh;
 }
