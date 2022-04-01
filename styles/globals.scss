@@ -2,6 +2,10 @@
 @use '_mixins';
 @use 'reset';
 
+body {
+  background-color: var(--color-primary);
+}
+
 //selection color
 *::selection {
   background-color: red;
