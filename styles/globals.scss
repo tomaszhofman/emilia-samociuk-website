@@ -3,22 +3,67 @@
 @use 'reset';
 @use 'variables';
 
-body {
-  background-color: var(--color-primary);
-}
-
-//selection color
 *::selection {
   background-color: red;
 
-  //test media
   @include mixins.media('m') {
     background-color: green;
   }
 }
 
-//loading state
-body.loading {
-  overflow: hidden;
-  height: 100vh;
+body {
+  background-color: var(--color-primary);
+  &:before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    animation: noise 0.2s infinite;
+    visibility: visible;
+  }
+  &.loading {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+@keyframes noise {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
 }

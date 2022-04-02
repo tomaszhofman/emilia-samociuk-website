@@ -22,7 +22,9 @@ const Home: NextPage = () => {
   return (
     <div>
       <h1> change theme {theme}</h1>
-      <button onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}>d</button>
+      <button onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}>
+        change
+      </button>
     </div>
   );
 };
