@@ -1,0 +1,28 @@
+.header {
+  padding: 1.88rem 2rem;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      .label {
+        font-family: Montserrat, serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--color-text-primary);
+        text-transform: capitalize;
+      }
+
+      .button {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
