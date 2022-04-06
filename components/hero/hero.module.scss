@@ -1,0 +1,42 @@
+@use './styles/_mixins';
+
+.hero {
+  padding: 10rem 3rem;
+  height: 100vh;
+
+  @include mixins.media('sm') {
+    padding: 5rem 1rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mixins.media('xl') {
+      flex-direction: column;
+    }
+
+    @include mixins.media('sm') {
+      height: 80%;
+    }
+
+    .heading {
+      font-family: Bigilla Bold, serif;
+      color: var(--color-text-secondary);
+      font-size: clamp(9rem, 20vw, 15rem);
+      line-height: 1;
+
+      @include mixins.media('xs') {
+        font-size: 11vh;
+      }
+    }
+
+    .btn {
+      align-self: flex-end;
+      @include mixins.media('sm') {
+        align-self: center;
+      }
+    }
+  }
+}

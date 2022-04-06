@@ -1,13 +1,15 @@
 import React, { ReactText, useEffect, useRef } from 'react';
 // @ts-ignore
 import CircleType from 'circletype';
+import clsx from 'clsx';
 import styles from './button.module.scss';
 
 type ButtonProps = {
   children: ReactText;
+  className?: string;
 };
 
-const Button = ({ children }: ButtonProps) => {
+const Button = ({ children, className }: ButtonProps) => {
   const textRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -19,7 +21,7 @@ const Button = ({ children }: ButtonProps) => {
     };
   }, []);
   return (
-    <button ref={textRef} className={styles.btn}>
+    <button ref={textRef} className={clsx(styles.btn, className)}>
       {children}
     </button>
   );
