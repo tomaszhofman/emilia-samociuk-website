@@ -1,0 +1,26 @@
+.btn {
+  border: none;
+  background-color: transparent;
+  width: 14rem;
+  height: 14rem;
+  color: var(--color-text-primary);
+  font-family: Bigilla Bold, serif;
+  font-weight: 700;
+  font-size: 2rem;
+  will-change: animation;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    animation: rotation 8s linear infinite;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

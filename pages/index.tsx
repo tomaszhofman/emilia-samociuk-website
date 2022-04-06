@@ -3,6 +3,7 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { Loader } from '@/components/loader';
 import { Header } from '@/components/header';
+import { Button } from '@/components/button';
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Header />
+      <Button>Book a free consultation</Button>
     </div>
   );
 };
