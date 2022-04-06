@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { Loader } from '@/components/loader';
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
+import { About } from '@/components/about';
+import { DividerLine } from '@/components/divider-line';
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
@@ -23,6 +25,11 @@ const Home: NextPage = () => {
     <div>
       <Header />
       <Hero />
+      <About
+        text={
+          'Z wykształcenia Product & Brand Managerka. Branża nieruchomości od razu okazała się zawodowym strzałem w dziesiątkę  '
+        }
+      />
     </div>
   );
 };
