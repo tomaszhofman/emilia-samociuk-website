@@ -26,10 +26,6 @@ export const ScrollTriggerProxy = () => {
     ScrollTrigger.addEventListener('refresh', () => scroll.update());
     ScrollTrigger.refresh();
 
-    scroll.on('scroll', (func: { direction: string }) => {
-      document.documentElement.setAttribute('data-direction', func.direction);
-    });
-
     return () => {
       if (scroll) {
         scroll.destroy();
