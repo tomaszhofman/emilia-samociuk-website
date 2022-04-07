@@ -21,15 +21,14 @@ const Home: NextPage = () => {
 
   if (!mounted || loading) return <Loader setLoading={setLoading} />;
   return (
-    <div>
-      <Header />
+    <main>
       <Hero />
       <About
         text={
           'Z wykształcenia Product & Brand Managerka. Branża nieruchomości od razu okazała się zawodowym strzałem w dziesiątkę  '
         }
       />
-    </div>
+    </main>
   );
 };
 
