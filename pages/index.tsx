@@ -4,7 +4,6 @@ import { Loader } from '@/components/loader';
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
 import { About } from '@/components/about';
-import { DividerLine } from '@/components/divider-line';
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);

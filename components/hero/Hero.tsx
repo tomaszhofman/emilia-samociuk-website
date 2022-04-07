@@ -1,10 +1,14 @@
 import React, { memo } from 'react';
 import styles from './hero.module.scss';
 import { Button } from '@/components/button';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 const Hero = memo(() => {
+  const { scroll } = useLocomotiveScroll();
+
+  console.log(scroll);
   return (
-    <section className={styles.hero}>
+    <section data-scroll-section className={styles.hero}>
       <div className={styles.container}>
         <h1 className={styles.heading}>
           Emilia <br /> Samociuk

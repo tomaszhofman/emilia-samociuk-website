@@ -7,7 +7,7 @@ type AboutProps = {
 
 const About = memo<AboutProps>(({ text }) => {
   return (
-    <section className={styles.about}>
+    <section data-scroll-section className={styles.about}>
       <div className={styles.container}>
         <p className={styles.paragraph}>{text}</p>
       </div>

@@ -1,12 +1,12 @@
 import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'next-themes';
+import { AppProviders } from '../Providers/AppProviders';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider enableSystem={true} storageKey="theme">
+    <AppProviders>
       <Component {...pageProps} />
-    </ThemeProvider>
+    </AppProviders>
   );
 }
 
